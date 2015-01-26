@@ -1,0 +1,26 @@
+﻿@using umbraco.MacroEngines
+@inherits umbraco.MacroEngines.DynamicNodeContext
+
+<ul class="bjqs">
+
+@{
+	DynamicNode currentPage = Model;
+    
+    if(currentPage.HasProperty("photoPicker"))
+    {
+        var imageIdsList = currentPage.GetProperty("photoPicker").Value.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse);
+        foreach (var imageId in imageIdsList)
+        {
+            DynamicNode image = Library.MediaById(imageId);
+            if(image !=null)
+            {
+                <li><img src="@image.Url" title="@image.Name" /></li>
+            }
+        }
+    }
+}
+
+</ul>
+
+
+

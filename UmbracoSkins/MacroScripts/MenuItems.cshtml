@@ -1,0 +1,23 @@
+﻿@using umbraco.MacroEngines
+@inherits umbraco.MacroEngines.DynamicNodeContext
+
+<ul>
+@{
+	DynamicNode currentPage = Model;
+    
+    if(currentPage.HasProperty("menuItems"))
+    {
+        var menuItemList = currentPage.GetProperty("menuItems").Value.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+        foreach (var menuItem in menuItemList)
+        {
+            if(!menuItem.Trim().Equals(String.Empty))
+            {
+                <li class="menuItem"><a href="#">@menuItem</a></li>
+            }
+        }
+    }
+}
+</ul>
+
+
+

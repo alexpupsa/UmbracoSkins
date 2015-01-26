@@ -1,0 +1,5 @@
+G:\UmbracoSkins\UmbracoSkins\bin\UmbracoSkins.dll
+G:\UmbracoSkins\UmbracoSkins\bin\UmbracoSkins.pdb
+G:\UmbracoSkins\UmbracoSkins\obj\Debug\UmbracoSkins.csprojResolveAssemblyReference.cache
+G:\UmbracoSkins\UmbracoSkins\obj\Debug\UmbracoSkins.dll
+G:\UmbracoSkins\UmbracoSkins\obj\Debug\UmbracoSkins.pdb
